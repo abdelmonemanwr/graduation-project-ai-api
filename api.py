@@ -55,8 +55,6 @@ def sentiment_analyzer() -> str:
 
 
 
-
-
 def toxicVec():
     # Load the saved vectorizer
     with open('toxic_vectorizer.pkl', 'rb') as file:
