@@ -9,3 +9,5 @@ nltk
 contractions
 wordcloud
 scikit-learn
+seaborn
+Pillow
