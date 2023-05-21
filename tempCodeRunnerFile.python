@@ -1,0 +1,16 @@
+
+from collections import Counter
+def count_words(string):
+    freq = Counter(string)
+    return (freq[' '] + 1)
+
+texxt = "i love you thank you lamona lamona elbanat mgnona"
+
+
+x = count_words(texxt)
+
+print(x)
+
+print(x * 0.5)
+
+print(x * 0.25)
