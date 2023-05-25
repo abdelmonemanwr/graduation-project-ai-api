@@ -6,7 +6,7 @@ from flask_cors import CORS
 from collections import Counter
 from transformers import pipeline
 from flask import Flask, request, jsonify
-#from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 app = Flask(__name__)
 CORS(app)
