@@ -1,15 +1,6 @@
 gunicorn
 Flask
 Flask-Cors
-vaderSentiment
-pandas
-numpy
-matplotlib
-nltk
 contractions
-wordcloud
-scikit-learn
-seaborn
-Pillow
 transformers
 torch
