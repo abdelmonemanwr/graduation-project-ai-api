@@ -11,5 +11,3 @@ wordcloud
 scikit-learn
 seaborn
 Pillow
-transformers
-torch
