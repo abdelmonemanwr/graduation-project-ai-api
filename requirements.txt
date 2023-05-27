@@ -10,3 +10,6 @@ wordcloud
 scikit-learn
 seaborn
 Pillow
+contractions
+transformers
+torch

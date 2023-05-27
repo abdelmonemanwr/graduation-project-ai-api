@@ -1,9 +1,9 @@
 import json
-#import torch
+import torch
 import pickle
 from flask_cors import CORS
-#from collections import Counter
-#from transformers import pipeline
+from collections import Counter
+from transformers import pipeline
 from flask import Flask, request, jsonify
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
@@ -100,7 +100,7 @@ def toxic_comment_classifier() -> str:
         return {"error": str(e)}, 500
 
 ###########################################################
-"""
+
 def count_words(string):
     freq = Counter(string)
     return (freq[' '] + 1)
@@ -121,6 +121,5 @@ def summarize() -> str:
                             )
     return jsonify({"message": summerized})
 
-"""
 if __name__ == '__main__':
     app.run(debug=True)
