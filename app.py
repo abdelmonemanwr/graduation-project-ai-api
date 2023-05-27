@@ -7,6 +7,14 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 app = Flask(__name__)
 CORS(app)
 
+# ////////////////////////////////////////////////////////////////////
+
+@app.route('/')
+def index():
+    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
+
+# ////////////////////////////////////////////////////////////////////
+
 def sentimentVectorizer():
     # Load the saved vectorizer
     with open('seniment_vectorizer.pkl', 'rb') as file:
@@ -97,5 +105,7 @@ def toxic_comment_classifier() -> str:
     except Exception as e:
         return {"error": str(e)}, 500
 
+# ////////////////////////////////////////////////////////////////////
+    
 if __name__ == '__main__':
     app.run(debug=True)
