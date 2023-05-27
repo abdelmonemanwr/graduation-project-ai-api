@@ -16,17 +16,17 @@ def index():
 
 # ////////////////////////////////////////////////////////////////////
 
-def sentimentVectorizer():
-    # Load the saved vectorizer
-    with open('seniment_vectorizer.pkl', 'rb') as file:
-        vectorizer = pickle.load(file)
-    return vectorizer
+# def sentimentVectorizer():
+#     # Load the saved vectorizer
+#     with open('seniment_vectorizer.pkl', 'rb') as file:
+#         vectorizer = pickle.load(file)
+#     return vectorizer
 
-def sentimentModel():
-    # Load the model from disk
-    with open('svc_model.pkl', 'rb') as file:
-        svm = pickle.load(file)
-    return svm
+# def sentimentModel():
+#     # Load the model from disk
+#     with open('svc_model.pkl', 'rb') as file:
+#         svm = pickle.load(file)
+#     return svm
 
 @app.route("/sentiment_analyzer/", methods=["POST"])
 def sentiment_analyzer() -> str:
@@ -38,23 +38,23 @@ def sentiment_analyzer() -> str:
         # Get input text from request body
         input_text = request.json.get("string")
 
-        vec = sentimentVectorizer()
-        mod = sentimentModel()
+#         vec = sentimentVectorizer()
+#         mod = sentimentModel()
         result = {}
-        if (mod ==""):
-            result = {
-                "message": "Failure Occurs",
-                "info": "please enter a valid model number from 0 to 4 inclusive."
-            }
-        else :
-            # do process here
-            sid = SentimentIntensityAnalyzer()
-            deep_output = sid.polarity_scores(input_text)
-            #deep_output = mod.polarity_scores(deep_output)['compound']
-            result = {
-                "message": "Done Successfully",
-                "result": deep_output
-            }
+#         if (mod ==""):
+#             result = {
+#                 "message": "Failure Occurs",
+#                 "info": "please enter a valid model number from 0 to 4 inclusive."
+#             }
+#         else :
+        # do process here
+        sid = SentimentIntensityAnalyzer()
+        deep_output = sid.polarity_scores(input_text)
+        #deep_output = mod.polarity_scores(deep_output)['compound']
+        result = {
+            "message": "Done Successfully",
+            "result": deep_output
+        }
         # return output
         return result
     except Exception as e:
