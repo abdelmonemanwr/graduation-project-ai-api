@@ -1,9 +1,9 @@
 import json
-import torch
+#import torch
 import pickle
 from flask_cors import CORS
-from collections import Counter
-from transformers import pipeline
+#from collections import Counter
+#from transformers import pipeline
 from flask import Flask, request, jsonify
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 

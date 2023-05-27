@@ -1,9 +1,6 @@
 gunicorn
 Flask
 Flask-Cors
-contractions
-transformers
-torch
 vaderSentiment
 pandas
 numpy
