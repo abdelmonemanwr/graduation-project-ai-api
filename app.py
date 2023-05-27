@@ -22,7 +22,7 @@ def sentimentModel():
         svm = pickle.load(file)
     return svm
 
-@app.route("/sentiment_analyzer", methods=["POST"])
+@app.route("/sentiment_analyzer/", methods=["POST"])
 def sentiment_analyzer() -> str:
     try:
         # Check if request body is valid JSON
@@ -68,7 +68,7 @@ def toxicModel(text):
         rf = pickle.load(file)
     return rf
 
-@app.route("/toxic_comment", methods=["POST"])
+@app.route("/toxic_comment/", methods=["POST"])
 def toxic_comment_classifier() -> str:
     try:
         # Check if request body is valid JSON
