@@ -58,6 +58,7 @@ def sentiment_analyzer() -> str:
         # return output
         return result
     except Exception as e:
+        print(e)
         return {"error": str(e)}, 500
 
 # ////////////////////////////////////////////////////////////////////
