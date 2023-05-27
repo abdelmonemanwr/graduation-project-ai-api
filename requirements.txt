@@ -4,3 +4,12 @@ Flask-Cors
 contractions
 transformers
 torch
+vaderSentiment
+pandas
+numpy
+matplotlib
+nltk
+wordcloud
+scikit-learn
+seaborn
+Pillow
